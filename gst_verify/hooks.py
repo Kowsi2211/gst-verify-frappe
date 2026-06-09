@@ -47,7 +47,9 @@ app_license = "mit"
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
-
+doctype_js = {
+    "Supplier": "public/js/supplier_gst.js"
+}
 # Svg Icons
 # ------------------
 # include app icons in desk
@@ -144,6 +146,26 @@ app_license = "mit"
 # 		"on_trash": "method"
 # 	}
 # }
+doc_events = {
+    'Supplier': {
+        "before_save": "gst_verify.events.supplier_gst.validate_and_fetch_gst"
+    }
+}
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [
+            ["module", "=", "GST Verify"],
+        ]
+
+    },
+    {
+        "dt": "Property Setter",
+        "filters": [
+            ["module", "=", "GST Verify"],
+        ]
+    }
+]
 
 # Scheduled Tasks
 # ---------------
