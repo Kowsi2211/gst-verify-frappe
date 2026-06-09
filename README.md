@@ -1,34 +1,21 @@
-### Gst Verify
+# GST Verify — Frappe/ERPNext App
 
-gst verfication on supplier creation
+Auto-verifies GSTIN when a new Supplier is created in ERPNext.
 
-### Installation
+## 🔧 What It Does
+- Validates GSTIN format using regex
+- Calls GST Verification REST API
+- Auto-fills Legal Name, GST Status, Business Type, State
+- Secure API key storage via custom GST Settings DocType
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+## 📸 Demo
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/00598519-69ec-4929-9873-0fa8352d3679" />
 
-```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app gst_verify
-```
 
-### Contributing
+## 🛠️ Tech Stack
+Python | Frappe Framework | ERPNext | REST API | MySQL
 
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
-
-```bash
-cd apps/gst_verify
-pre-commit install
-```
-
-Pre-commit is configured to use the following tools for checking and formatting your code:
-
-- ruff
-- eslint
-- prettier
-- pyupgrade
-
-### License
-
-mit
- 
+## ⚙️ Installation
+1. bench get-app https://github.com/Kowsi2211/gst-verify-frappe
+2. bench --site your-site install-app gst_verify
+3. Go to GST Settings → enter your RapidAPI key
