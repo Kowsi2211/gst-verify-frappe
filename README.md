@@ -9,7 +9,8 @@ Auto-verifies GSTIN when a new Supplier is created in ERPNext.
 - Secure API key storage via custom GST Settings DocType
 
 ## 📸 Demo
-(add your before/after screenshot here)
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/00598519-69ec-4929-9873-0fa8352d3679" />
+
 
 ## 🛠️ Tech Stack
 Python | Frappe Framework | ERPNext | REST API | MySQL
